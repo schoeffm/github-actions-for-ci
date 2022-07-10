@@ -6,6 +6,14 @@ name: Node CI
 on: 
   push:
   workflow_dispatch:
+    inputs:
+      version:
+        description: This is just a version information to be attached to your stuff
+        default: "v1.2"
+        options:
+          - v1.2
+          - v2.2
+          - v3.3
 
 jobs:
   build:
